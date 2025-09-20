@@ -20,8 +20,6 @@
 #include <stdio.h>          // snprintf
 #include "tft_driver.h"
 #include "fonts.h"
-#include "ui_theme.h"
-#include "i18n.h"
 #include "config_pins.h"
 #include "my_adc.h"
 #include "my_joystick.h"
@@ -155,12 +153,6 @@ int main(void)
 
   TFT_Init(&hspi1);
   TFT_SetRotation(1);    /* 0: portre, 1: yatay */
-
-  UITheme_Init();          // aktif temayı hazırla (paleti yükler)
-  UITheme_SetByIndex(2);
-
-  I18N_Init();             // Dil sistemi
-  I18N_SetLang(I18N_DE);   // veya: I18N_SetLangByIndex(0)
 
   // EKRANI MENÜ ÇİZECEK → ilk tam çizim:
   Menu_Init();
@@ -465,3 +457,4 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
