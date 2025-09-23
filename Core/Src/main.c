@@ -17,6 +17,10 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include "main.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
 #include <stdio.h>          // snprintf
 #include "tft_driver.h"
 #include "fonts.h"
@@ -24,10 +28,6 @@
 #include "my_adc.h"
 #include "my_joystick.h"
 #include "menu.h"
-
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
 
 
 /* USER CODE END Includes */
@@ -457,4 +457,5 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
 
